@@ -18,7 +18,22 @@
     <title>Covalence Store</title>
 </head>
     <!--Might want to move ng-view to a div tag to persist a navbar to mult. views-->
-<body ng-view>
-    
+<body>
+    <div id="nav-bar">
+        
+        <a ng-href="/">
+        <img src="images/Newlogo.png" alt="covalance logo">
+        </a>
+        
+        <a ng-href="/products"><h2>Products</h2></a>
+        
+        <a ng-href="/contact"><h3>Contact</h3></a>
+        
+        <a ng-href="/cart"><h4>Your Cart<h4></a>
+    </div>
+
+    <div ng-view>
+
+    </div>
 </body>
 </html>

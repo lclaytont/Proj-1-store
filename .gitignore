@@ -1,2 +1,6 @@
 node_modules
+<<<<<<< HEAD
 .variables
+=======
+package-lock.json
+>>>>>>> 09194cfcaf612053a0c61ac3fb6d1c31d6264289
