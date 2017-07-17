@@ -13,5 +13,6 @@ exports.allMisc = function() {
 }
 
 exports.singleProduct = function(id) {
+    console.log('Single Procedure: ' + id)
     return db.row('GetSingleProduct', [id]);
 }
