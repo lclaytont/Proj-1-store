@@ -5,10 +5,10 @@
 //     $scope.products = products.query();
 // })
 
-    app.controller("productController", ["$scope", "products" ,"$routeParams" 
-    ,"$location",
-    function($scope, products, $routeParams, $location){
+    app.controller("productController", ["$scope" ,"$routeParams" 
+    ,"$location", "ProductFactory",
+    function($scope, $routeParams, $location, ProductFactory){
         console.log("Products page and controller loaded!")
-        $scope.products = products.query();
-        console.log(products.query());
-    }])
+        $scope.products = ProductFactory.query();
+        console.log($scope.products);
+    }]);
