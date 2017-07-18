@@ -20,7 +20,17 @@
 </head>
     <!--Might want to move ng-view to a div tag to persist a navbar to mult. views-->
 <body>
-    <div id="nav-bar">
+    <nav class= "navbar navbar-default">
+    <div class= "container-fluid">
+        <div class= "navbar-header">
+            <button type= "button" class="navbar-toggle collapsed" 
+            data-toggle="collapse" data-target="#thing-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="grab navbar-brand">Cliquebait</a>
+            </div>
         
         <a ng-href="/">
         <img src="images/Newlogo.png" alt="covalance logo">
@@ -36,5 +46,9 @@
     <div ng-view>
 
     </div>
+    <script type="text/javescript" src="https://js.stripe.com/v2"></script>
+    <script type="text/javescript">
+        Stripe.setPublishableKey('pk_test_lmE0tlXj3002DBIkv3A65Hur');
+        </script>
 </body>
 </html>
