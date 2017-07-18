@@ -20,8 +20,8 @@ exports.empty = function(procedure, values) {
 }
 
 exports.row = function(procedure, values) {
-    return callProcedure(procedure, values).then(function(results) {
-        return results[0][0];
+    return callProcedure(procedure, values).then(function(result) {
+        return result[0][0];
     })
 }
 
