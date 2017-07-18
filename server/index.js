@@ -8,7 +8,7 @@ var api = require('./api');
 
 //  --> Instantiate App
 var app = express();
-var router = express.Router()
+var router = express.Router();
 
 //  --> Setting up bodyParser and express.static
 app.use(express.static(path.join(__dirname, '../client')));
