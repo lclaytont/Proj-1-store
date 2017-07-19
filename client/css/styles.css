@@ -1,7 +1,9 @@
-
-*{
-      border: 1px dotted black;
-}
 body {
     background-color: blue;
+}
+
+.grab {
+    height: 15px;
+    width: 30px;
+
 }
