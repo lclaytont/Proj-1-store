@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"> 
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-resource.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
@@ -29,31 +31,22 @@
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
                 </button>
-                <a class="grab navbar-brand"><img src="images/Newlogo.png" alt="covalance logo"></a>
+                <a href="#"><img class="img-logo" src="images/Newlogo.png" alt="covalance logo"></a>
+                <span class="divider"> | <span>
             </div>
-
-        <div class="collapse navbar-collapse" id="collapse">
+        <div class="collapse navbar-collapse" id="thing-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">Apparel</a></li>
-                <li><a href="#">Misc</a></li>
+                <li><a class="deluxe-item" href="#">Apparel</a></li>
+                <li><a class="deluxe-item" href="#">Misc</a></li>
             </ul>
-            <a ng-href="/">        
-        </a>
-
-            <a ng-href="/products">
-                <h2>Products</h2>
-            </a>
-
-            <a ng-href="/contact">
-                <h3>Contact</h3>
-            </a>
-
-            <a ng-href="/cart">
-                <h4>Your Cart
-                    <h4>
-            </a>
+            <li class="navbar-right"><a class="another-item" href="#">Cart</a></li>
+            <a ng-href="/"></a>
         </div>
+    </nav>
+
+           
 
     <!--place for views-->
     <div ng-view>

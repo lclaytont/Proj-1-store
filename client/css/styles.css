@@ -1,9 +1,42 @@
 body {
-    background-color: blue;
+    margin: 0;
 }
 
-.grab {
-    height: 15px;
-    width: 30px;
+@media screen and (max-width: 600px) {
+  .divider {
+    display: none;
+  }
+}
 
+.img-logo {
+    height: 50px; 
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding-left: 1.5rem;;
+    padding-right: 4rem;
+}
+
+.navbar {
+    border-radius: 0 !important;
+    opacity: 0.9 !important;
+    height: 100%;
+    background-color: #29363E !important;
+}
+
+.divider {
+    font-size: 50px; 
+    font-weight: bold;
+    color: white;
+    padding-top: 30px;
+    /*color: #25ABF1 !important;*/
+}
+
+.deluxe-item{ 
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold; 
+    font-size: 3rem;
+    margin-left: 4rem;
+    margin-top: 1.5rem;
+    /*color: #25ABF1 !important;*/
+    color: white !important;
 }
