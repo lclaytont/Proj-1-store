@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-resource.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
@@ -18,39 +19,49 @@
     <script src="js/controllers/contactController.js"></script>
     <title>Covalence Store</title>
 </head>
-    <!--Might want to move ng-view to a div tag to persist a navbar to mult. views-->
+    
 <body>
-    <nav class= "navbar navbar-default">
-    <div class= "container-fluid">
-        <div class= "navbar-header">
-            <button type= "button" class="navbar-toggle collapsed" 
-            data-toggle="collapse" data-target="#thing-collapse" aria-expanded="false">
-            <span class="sr-only">Toggle Navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="grab navbar-brand"><img src= "/images/logo.svg"></a>
+    <!--navbar-->
+    <nav class= "navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#thing-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="grab navbar-brand"><img src="images/Newlogo.png" alt="covalance logo"></a>
             </div>
-        
+
         <div class="collapse navbar-collapse" id="collapse">
             <ul class="nav navbar-nav">
                 <li><a href="#">Apparel</a></li>
                 <li><a href="#">Misc</a></li>
-                </ul>
-        <a ng-href="/">
-        <img src="images/Newlogo.png" alt="covalance logo">
+            </ul>
+            <a ng-href="/">        
         </a>
-        
-        <a ng-href="/products"><h2>Products</h2></a>
-        
-        <a ng-href="/contact"><h3>Contact</h3></a>
-        
-        <a ng-href="/cart"><h4>Your Cart<h4></a>
-    </div>
 
+            <a ng-href="/products">
+                <h2>Products</h2>
+            </a>
+
+            <a ng-href="/contact">
+                <h3>Contact</h3>
+            </a>
+
+            <a ng-href="/cart">
+                <h4>Your Cart
+                    <h4>
+            </a>
+        </div>
+
+    <!--place for views-->
     <div ng-view>
 
     </div>
+
+
+    <!--html for stripe-->
     <script type="text/javescript" src="https://js.stripe.com/v2"></script>
     <script type="text/javescript">
         Stripe.setPublishableKey('pk_test_lmE0tlXj3002DBIkv3A65Hur');
