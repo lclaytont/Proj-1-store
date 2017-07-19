@@ -1,10 +1,9 @@
 
-app.controller('contactController', function($scope) {
+app.controller('contactController', function($scope,EmailFactory) {
     console.log("Contact Page Loaded")
-})
 
-.controller("contactController", ['$scope','EmailFactory', function($scope, EmailFactory){
-    $scope.contact = "CONTACT ME";
+
+    $scope.email = "CONTACT ME";
 
     $scope.getMessage = function() {
         var newEmail = {
@@ -15,12 +14,13 @@ app.controller('contactController', function($scope) {
         }
         console.log(newEmail);
 
-        var materEmail = new EmailFactory(newEmail);
+        var masterEmail = new EmailFactory(newEmail);
         masterEmail.$save(function (){
             console.log("sent email")
         }, function(){
             console.log("Error sending email")
         })
     }
-}])
+})
 
+ 
