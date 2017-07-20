@@ -4,7 +4,7 @@ app.config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider) {
         $locationProvider.html5Mode(true);
         $routeProvider
-        .when('/products', {
+        .when('/products/:id', {
             templateUrl: 'views/productList.html',
             controller: 'productController'
         })

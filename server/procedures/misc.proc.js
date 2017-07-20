@@ -1,5 +1,5 @@
 db = require('../config/db'); 
 
 exports.allMisc = function() {
-    return db.rows('GetProApp', []);
+    return db.rows('GetProMisc', []);
 }

@@ -92,3 +92,19 @@ JUMBOTRON / HERO STYLES
     height: 400px;
     /*visibility: hidden;    */
 }
+
+.misctron {
+    background: url('/images/covalence-store-misc-hero.jpg')no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+/*
+SINGLE PRODUCT VIEWS
+*/
+
+.product-detail {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+}

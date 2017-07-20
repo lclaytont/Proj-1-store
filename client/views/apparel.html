@@ -7,9 +7,10 @@
 <div class="bgc container">
     <div class="apps row">
         <div ng-repeat="c in clothes"class="col-md-3 apps">
-            <img class="img-thumbnail" ng-src="{{ c.imageurl }}">
+            <a ng-href="/products/{{ c.product_id }}"><img class="img-thumbnail" ng-src="{{ c.imageurl }}"></a>
             <p>{{ c.title }}</p><br/>
             <p>{{ c.price | currency:"$":0 }}</p>
+            <button ng-click="" type="button" class="btn btn-warning">Add to Cart</button>
         </div>
     </div>
 </div>
