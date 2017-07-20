@@ -1,11 +1,8 @@
 
-app.controller('contactController', function($scope,EmailFactory) {
+app.controller('contactController', function($scope, EmailFactory) {
     console.log("Contact Page Loaded")
 
-
-    $scope.email = "CONTACT ME";
-
-    $scope.getMessage = function() {
+    $scope.sendMessage = function() {
         var newEmail = {
             to: 'lclaytont@gmail.com',
             from: $scope.email,

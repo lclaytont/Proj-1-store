@@ -8,6 +8,14 @@ app.config(['$routeProvider', '$locationProvider',
             templateUrl: 'views/productList.html',
             controller: 'productController'
         })
+        .when('/apparel', {
+            templateUrl: 'views/apparel.html',
+            controller: 'apparelController'
+        })
+        .when('/misc', {
+            templateUrl: 'views/misc.html',
+            controller: 'miscController'
+        })
         .when('/contact', {
             templateUrl: 'views/contact.html',
             controller: 'contactController'

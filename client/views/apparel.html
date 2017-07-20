@@ -1,0 +1,15 @@
+<div class="jumbotron appareltron">
+    <div class="container">
+
+    </div>
+</div>
+
+<div class="bgc container">
+    <div class="apps row">
+        <div ng-repeat="c in clothes"class="col-md-3 apps">
+            <img class="img-thumbnail" ng-src="{{ c.imageurl }}">
+            <p>{{ c.title }}</p><br/>
+            <p>{{ c.price | currency:"$":0 }}</p>
+        </div>
+    </div>
+</div>
