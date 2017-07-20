@@ -10,7 +10,7 @@
             <a ng-href="/products/{{ m.product_id }}"><img class="img-thumbnail" ng-src="{{ m.imageurl }}"></a>
             <p>{{ m.title }}</p><br/>
             <p>{{ m.price | currency:"$":0 }}</p>
-            <button type="button" ng-click="" class="btn btn-warning">Add to Cart</button>
+            <button type="button" ng-click="addToCart(m)" class="btn btn-warning">Add to Cart</button>
         </div>
     </div>
 </div>
