@@ -1,15 +1,15 @@
 
-app.controller('contactController', function($scope, EmailFactory, SEOService, $location) {
+app.controller('contactController', function ($scope, EmailFactory, SEOService, $location) {
     console.log("Contact Page Loaded")
 
     SEOService.setSEO({
-            title: 'Contact Us',
-            image: 'http://' + $location.host() + 'images/covalence-store-home-copy.jpg',
-            url: $location.url(),
-            description: 'Drop us a line'
-        })
+        title: 'Contact Us',
+        image: 'http://' + $location.host() + 'images/covalence-store-home-copy.jpg',
+        url: $location.url(),
+        description: 'Drop us a line'
+    })
 
-    $scope.sendMessage = function() {
+    $scope.sendMessage = function () {
         var newEmail = {
             to: 'lclaytont@gmail.com',
             from: $scope.email,
@@ -19,12 +19,15 @@ app.controller('contactController', function($scope, EmailFactory, SEOService, $
         console.log(newEmail);
 
         var masterEmail = new EmailFactory(newEmail);
-        masterEmail.$save(function (){
+        masterEmail.$save(function () {
             console.log("sent email")
-        }, function(){
-            console.log("Error sending email")
+        }, function () {
+                console.log("Error sending email")
         })
+
+        $scope.email = '';
+        $scope.subject = '';
+        $scope.content = '';
     }
 })
 
- 

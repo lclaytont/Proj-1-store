@@ -23,7 +23,7 @@ BASE NAVBAR STYLES
 .navbar { 
     border-radius: 0 !important;
     font-family: 'Noto Sans', sans-serif;
-    height: 8rem;
+    /*height: 8rem;*/
     margin-bottom: 0;
     color: #fff;
 }

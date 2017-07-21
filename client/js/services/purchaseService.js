@@ -48,13 +48,30 @@ app.service('purchaseService', [function () {
 
         this.downQuantity = function(item) {
             var cart = JSON.parse(localStorage.cart);
-            for (var i = 0; i < cart.length; i++) {
-                if(item.product_id === cart[i].product_id){
-                    cart[i].quantity -= 1;
-                    item.quantity -= 1; 
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                }
+            var index = indexOf(cart, item);
+            if(index === -1) {
+                console.log("item does not exist");
+                return;
             }
+            cart[index].quantity -= 1;
+            item.quantity -= 1;
+            if(cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+                window.location.href = '/cart'
+            }
+            console.log(index);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            // for (var i = 0; i < cart.length; i++) {
+            //     if (cart[i].quantity <= 0) {
+            //         cart.splice(i, 1);
+            //         localStorage.setItem('cart', JSON.stringify(cart));
+            //     }
+            //     if(item.product_id === cart[i].product_id) {
+            //         cart[i].quantity -= 1;
+            //         item.quantity -= 1; 
+            //         localStorage.setItem('cart', JSON.stringify(cart));
+            //     }
+            // }
         }
         
 

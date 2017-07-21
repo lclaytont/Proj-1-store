@@ -11,7 +11,7 @@ var api = require('./api');
 var app = express();
 var router = express.Router();
 
-prerender.set('prerenderServiceUrl', 'http://localhost:1337');
+prerender.set('prerenderServiceUrl', 'http://localhost:1337/');
 prerender.set('prerenderToken', process.env.PRERENDER_TOKEN);
 app.use(prerender)
 

@@ -1,5 +1,5 @@
 
-app.controller('purchaseController', function ($scope, purchaseService, purchasesFactory, purchasesdbService) {
+app.controller('purchaseController', function ($scope, purchaseService, purchasesFactory, purchasesdbService, SEOService, $location) {
     console.log("Purchase Page Loaded");
 
 
@@ -23,7 +23,7 @@ app.controller('purchaseController', function ($scope, purchaseService, purchase
 
     function calculate() {
         for (var i = 0; i < $scope.items.length; i++) {
-            console.log($scope.items[i])
+            // console.log($scope.items[i]) 
             $scope.finalcost += $scope.items[i].price * $scope.items[i].quantity
         }
         return $scope.finalcost;
@@ -59,33 +59,33 @@ app.controller('purchaseController', function ($scope, purchaseService, purchase
                 var newDonation = new purchasesFactory(donationObj)
                 newDonation.$save(function () {
                     console.log('successfully charged card')
-                    // var dbthing = {};
-                    // for (var i = 0; i < $scope.items.length; i++) {
-                    //     dbthing.product_id = $scope.items[i].product_id;
-                    //     dbthing.price = $scope.items[i].price;
-                    //     dbthing.stripetransactionid = donationObj.token;
-                    //     var dbpost = new purchasesdbService(dbthing)
-                    //     dbpost.$save(function () {
-                    //         console.log('Posted to purchase table in db')
-                    //     }, function () {
-                    //         console.log("Error trying to post to purchasesdb");
-                    //     })
-                    // }
-                }, function () {
-                    console.log("error with card")
+                    var dbthing = {};
+                    for (var i = 0; i < $scope.items.length; i++) {
+                        dbthing.product_id = $scope.items[i].product_id;
+                        dbthing.price = $scope.items[i].price;
+                        dbthing.stripetransactionid = donationObj.token;
+                        var dbpost = new purchasesdbService(dbthing)
+                        dbpost.$save(function () {
+                            console.log('Posted to purchase table in db')
+                        }, function () {
+                            console.log("Error trying to post to purchasesdb");
+                        })
+                    }
+                }, function (err) {
+                    console.log("error with card " + err.message)
                 })
-                var dbthing = {};
-                for (var i = 0; i < $scope.items.length; i++) {
-                    dbthing.product_id = $scope.items[i].product_id;
-                    dbthing.price = $scope.items[i].price;
-                    dbthing.stripetransactionid = donationObj.token;
-                    var dbpost = new purchasesdbService(dbthing)
-                    dbpost.$save(function () {
-                        console.log('Posted to purchase table in db')
-                    }, function () {
-                        console.log("Error trying to post to purchasesdb");
-                    })
-                }
+                // var dbthing = {};
+                // for (var i = 0; i < $scope.items.length; i++) {
+                //     dbthing.product_id = $scope.items[i].product_id;
+                //     dbthing.price = $scope.items[i].price;
+                //     dbthing.stripetransactionid = donationObj.token;
+                //     var dbpost = new purchasesdbService(dbthing)
+                //     dbpost.$save(function () {
+                //         console.log('Posted to purchase table in db')
+                //     }, function (err) {
+                //         console.log("Error trying to post to purchasesdb " + err.message );
+                //     })
+                // }
 
                 localStorage.clear();
                 window.location.href = '/';

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="CovalenceStore">
 <head>
-    <base href="/">
+     <base href="/">
     <meta charset="UTF-8">
+    <meta name="fragment" content="!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="fragment" content="!">
     <title>{{ seo.title }}</title>
     <meta property="og:title" content="{{ seo.title }}">
     <meta property="twitter:title" content="{{seo.title}}">
@@ -13,9 +13,9 @@
     <meta property="twitter:image" content="{{seo.image}}">
     <meta property="og:url" content="{{ seo.url }}">
     <meta property="twitter:url" content="{{ seo.url }}">
-    <meta property="description" content="{{ seo.description}}">
-    <meta property="og:description" content="{{ seo.description }} ">
-    <meta property="twitter:description " content="{{ seo.description }} ">
+    <meta property="description" content="{{seo.description}}">
+    <meta property=" og:description" content="{{ seo.description }}">
+    <meta property="twitter:description" content="{{ seo.description }}">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700" rel="stylesheet">
@@ -47,7 +47,7 @@
 <body>
     <!--navbar-->
     <nav class= "navbar navbar-inverse">
-        <div class="container-fluid">
+        <div class="container">
             <!--navbar header-->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuItems" aria-expanded="false">
@@ -57,7 +57,7 @@
                     <span class="icone-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/"> 
-                    <img class="logo" style="height: 50px; width: 300px;"src="/images/logo.svg" alt="">
+                    <img class="logo" style="height: 50px; width: 250px;"src="/images/logo.svg" alt="">
                 </a>
             </div>  
             <!--menu items-->
