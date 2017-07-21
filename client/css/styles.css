@@ -100,11 +100,30 @@ JUMBOTRON / HERO STYLES
     height: 400px;
 }
 
+.purchasetron {
+    background-color: rgb(39, 49, 57) !important;
+    color: white; 
+}
+
 /*
 SINGLE PRODUCT VIEWS
 */
 
+.quantity-widget {
+    text-align: center;
+}
+
 .product-detail {
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
+}
+
+
+/*
+CHECKOUT
+*/
+
+.votingButton a{
+    text-decoration: none !important;
+    color: #fff !important;
 }

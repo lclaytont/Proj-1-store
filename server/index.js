@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
+var prerender = require('prerender-node');
 var checkAsset = require('./middleware/isAsset.mw');
 var api = require('./api');
 
@@ -10,10 +11,15 @@ var api = require('./api');
 var app = express();
 var router = express.Router();
 
+prerender.set('prerenderServiceUrl', 'http://localhost:1337');
+prerender.set('prerenderToken', process.env.PRERENDER_TOKEN);
+app.use(prerender)
+
+
+
 //  --> Setting up bodyParser and express.static
 app.use(express.static(path.join(__dirname, '../client')));
 app.use(bodyParser.json())
-
 
 
 app.use('/api', api);
